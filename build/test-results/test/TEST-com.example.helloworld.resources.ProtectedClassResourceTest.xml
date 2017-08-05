@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.helloworld.resources.ProtectedClassResourceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-08-05T21:43:15" hostname="ubuntu-steveo" time="0.179">
+  <properties/>
+  <testcase name="testProtectedBasicUserEndpoint" classname="com.example.helloworld.resources.ProtectedClassResourceTest" time="0.153"/>
+  <testcase name="testProtectedAdminEndpoint" classname="com.example.helloworld.resources.ProtectedClassResourceTest" time="0.005"/>
+  <testcase name="testProtectedBasicUserEndpointPrincipalIsNotAuthorized403" classname="com.example.helloworld.resources.ProtectedClassResourceTest" time="0.013"/>
+  <testcase name="testProtectedBasicUserEndpointAsAdmin" classname="com.example.helloworld.resources.ProtectedClassResourceTest" time="0.004"/>
+  <testcase name="testProtectedGuestEndpoint" classname="com.example.helloworld.resources.ProtectedClassResourceTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -2,14 +2,19 @@ apply plugin: 'java'
 apply plugin: 'gradle-one-jar'
 apply plugin: 'application'
 
+mainClassName = 'com.example.helloworld.HelloWorldApplication'
+
+project.ext {
+    dropwizardVersion = '1.1.2'
+    testDependencyVersion = '2.25.1'
+//    testDependencyVersion = '2.26-b09'
+}
+
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 // UTF-8 should be standard by now. So use it!
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-
-// The main class of the application
-mainClassName = 'com.example.helloworld.HelloWorldApplication'
 
 // Add Gradle OneJar Plugin, see https://github.com/rholder/gradle-one-jar
 buildscript {
@@ -22,37 +27,44 @@ buildscript {
     }
 }
 
-// Set our project variables
-project.ext {
-    dropwizardVersion = '1.1.2'
-}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile (
-       'io.dropwizard:dropwizard-core:' + dropwizardVersion,
-       'io.dropwizard:dropwizard-hibernate:' + dropwizardVersion,
-       'io.dropwizard:dropwizard-migrations:' + dropwizardVersion,
-       'io.dropwizard:dropwizard-auth:' + dropwizardVersion,
-       'io.dropwizard:dropwizard-http2:' + dropwizardVersion,
-       'io.dropwizard:dropwizard-views-freemarker:' + dropwizardVersion,
-       'io.dropwizard:dropwizard-views-mustache:' + dropwizardVersion,
-       'io.dropwizard:dropwizard-metrics-graphite:' + dropwizardVersion,
-       'io.dropwizard:dropwizard-assets:' + dropwizardVersion,
-       'com.h2database:h2:1.3.168'
-    )
+    compile 'com.h2database:h2:1.3.168',
+            'io.dropwizard:dropwizard-assets:' + dropwizardVersion,
+            'io.dropwizard:dropwizard-auth:' + dropwizardVersion,
+            'io.dropwizard:dropwizard-core:' + dropwizardVersion,
+            'io.dropwizard:dropwizard-hibernate:' + dropwizardVersion,
+            'io.dropwizard:dropwizard-http2:' + dropwizardVersion,
+            'io.dropwizard:dropwizard-metrics-graphite:' + dropwizardVersion,
+            'io.dropwizard:dropwizard-migrations:' + dropwizardVersion,
+            'io.dropwizard:dropwizard-views-freemarker:' + dropwizardVersion,
+            'io.dropwizard:dropwizard-views-mustache:' + dropwizardVersion
 
+
+    testCompile 'io.dropwizard:dropwizard-testing:' + dropwizardVersion,
+                'org.glassfish.hk2:hk2-api:2.1.58',
+                'org.mockito:mockito-core:2.8.47',
+                'junit:junit:4.12'
+
+    testCompile ('org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:' + testDependencyVersion) {
+      exclude group: 'javax.servlet', module: 'javax-servlet-api'
+      exclude group: 'junit', module: 'junit'
+    }
+
+    testCompile ('org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:' + testDependencyVersion) {
+      exclude group: 'javax.servlet', module: 'javax-servlet-api'
+      exclude group: 'junit', module: 'junit'
+    }
 }
 
-// Configure the oneJar task
 task oneJar(type: OneJar) {
     mainClass = mainClassName
 }
 
-// Configure the run task to start the Dropwizard service
 run {
     args 'server', './src/dist/config/helloworld.yml'
 

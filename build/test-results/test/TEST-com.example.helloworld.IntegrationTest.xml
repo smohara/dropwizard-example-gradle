@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.helloworld.IntegrationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-08-05T21:43:14" hostname="ubuntu-steveo" time="0.524">
+  <properties/>
+  <testcase name="testLogFileWritten" classname="com.example.helloworld.IntegrationTest" time="0.042"/>
+  <testcase name="testPostPerson" classname="com.example.helloworld.IntegrationTest" time="0.467"/>
+  <testcase name="testHelloWorld" classname="com.example.helloworld.IntegrationTest" time="0.014"/>
+  <system-out><![CDATA[INFO  [2017-08-05 21:43:11,708] org.eclipse.jetty.util.log: Logging initialized @1521ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2017-08-05 21:43:11,797] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-08-05 21:43:11,799] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-08-05 21:43:11,800] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: assets for path /assets/*
+INFO  [2017-08-05 21:43:11,942] org.hibernate.Version: HHH000412: Hibernate Core {5.2.8.Final}
+INFO  [2017-08-05 21:43:11,943] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2017-08-05 21:43:11,951] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2017-08-05 21:43:11,974] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  [2017-08-05 21:43:12,247] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2017-08-05 21:43:12,278] org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2017-08-05 21:43:12,466] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@630124bd
+INFO  [2017-08-05 21:43:12,467] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@65248047
+INFO  [2017-08-05 21:43:12,467] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@69d9d137
+INFO  [2017-08-05 21:43:12,467] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@4270bae0
+INFO  [2017-08-05 21:43:12,467] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@4f2e81cf
+INFO  [2017-08-05 21:43:12,467] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@52d744ce
+INFO  [2017-08-05 21:43:12,467] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@15b753ce
+INFO  [2017-08-05 21:43:12,467] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@2e2c984e
+INFO  [2017-08-05 21:43:12,468] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@b5bcefe
+INFO  [2017-08-05 21:43:12,640] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2017-08-05 21:43:12,718] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2017-08-05 21:43:12,718] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2017-08-05 21:43:12,724] io.dropwizard.server.ServerFactory: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+INFO  [2017-08-05 21:43:12,815] org.eclipse.jetty.setuid.SetUIDListener: Opened application@7a8e412a{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-08-05 21:43:12,815] org.eclipse.jetty.setuid.SetUIDListener: Opened application@4c4e69e7{SSL,[ssl, http/1.1]}{0.0.0.0:8443}
+INFO  [2017-08-05 21:43:12,815] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@71a7e897{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-08-05 21:43:12,815] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@1a167d07{SSL,[ssl, http/1.1]}{0.0.0.0:8444}
+INFO  [2017-08-05 21:43:12,817] org.eclipse.jetty.server.Server: jetty-9.4.2.v20170220
+INFO  [2017-08-05 21:43:12,854] org.eclipse.jetty.util.ssl.SslContextFactory: x509=X509@a966e06(localhost,h=[],w=[]) for SslContextFactory@38c9a13f(file:///home/local/ORCHARD-SYSTEMS/steveno/ois/git/dropwizard-example-gradle/example.keystore,null)
+INFO  [2017-08-05 21:43:12,949] io.dropwizard.jetty.HttpsConnectorFactory: Supported protocols: [SSLv2Hello, SSLv3, TLSv1, TLSv1.1, TLSv1.2]
+INFO  [2017-08-05 21:43:12,949] io.dropwizard.jetty.HttpsConnectorFactory: Supported cipher suites: [TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV, TLS_DH_anon_WITH_AES_128_GCM_SHA256, TLS_DH_anon_WITH_AES_128_CBC_SHA256, TLS_ECDH_anon_WITH_AES_128_CBC_SHA, TLS_DH_anon_WITH_AES_128_CBC_SHA, TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA, SSL_DH_anon_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_DH_anon_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA, SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA, TLS_RSA_WITH_NULL_SHA256, TLS_ECDHE_ECDSA_WITH_NULL_SHA, TLS_ECDHE_RSA_WITH_NULL_SHA, SSL_RSA_WITH_NULL_SHA, TLS_ECDH_ECDSA_WITH_NULL_SHA, TLS_ECDH_RSA_WITH_NULL_SHA, TLS_ECDH_anon_WITH_NULL_SHA, SSL_RSA_WITH_NULL_MD5, TLS_KRB5_WITH_3DES_EDE_CBC_SHA, TLS_KRB5_WITH_3DES_EDE_CBC_MD5, TLS_KRB5_WITH_DES_CBC_SHA, TLS_KRB5_WITH_DES_CBC_MD5, TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA, TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5]
+INFO  [2017-08-05 21:43:12,950] org.eclipse.jetty.util.ssl.SslContextFactory: x509=X509@2d4f432b(localhost,h=[],w=[]) for SslContextFactory@7e38f287(file:///home/local/ORCHARD-SYSTEMS/steveno/ois/git/dropwizard-example-gradle/example.keystore,null)
+INFO  [2017-08-05 21:43:13,446] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /filtered/hello (com.example.helloworld.resources.FilteredResource)
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /hello-world/date (com.example.helloworld.resources.HelloWorldResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_freemarker (com.example.helloworld.resources.PersonResource)
+    GET     /people/{personId}/view_mustache (com.example.helloworld.resources.PersonResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /protected/admin (com.example.helloworld.resources.ProtectedResource)
+    GET     /views/iso88591.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/iso88591.mustache (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.ftl (com.example.helloworld.resources.ViewResource)
+    GET     /views/utf8.mustache (com.example.helloworld.resources.ViewResource)
+
+INFO  [2017-08-05 21:43:13,448] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@4c68a757{/,null,AVAILABLE}
+INFO  [2017-08-05 21:43:13,450] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/echo (com.example.helloworld.tasks.EchoTask)
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2017-08-05 21:43:13,455] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@152e7b72{/,null,AVAILABLE}
+INFO  [2017-08-05 21:43:13,463] org.eclipse.jetty.server.AbstractConnector: Started application@7a8e412a{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-08-05 21:43:13,465] org.eclipse.jetty.server.AbstractConnector: Started application@4c4e69e7{SSL,[ssl, http/1.1]}{0.0.0.0:8443}
+INFO  [2017-08-05 21:43:13,466] org.eclipse.jetty.server.AbstractConnector: Started admin@71a7e897{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-08-05 21:43:13,467] org.eclipse.jetty.server.AbstractConnector: Started admin@1a167d07{SSL,[ssl, http/1.1]}{0.0.0.0:8444}
+INFO  [2017-08-05 21:43:13,467] org.eclipse.jetty.server.Server: Started @3281ms
+INFO  [2017-08-05 21:43:13,986] liquibase: Successfully acquired change log lock
+INFO  [2017-08-05 21:43:14,567] liquibase: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2017-08-05 21:43:14,569] liquibase: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2017-08-05 21:43:14,578] liquibase: migrations.xml: migrations.xml::1::codahale: Table people created
+INFO  [2017-08-05 21:43:14,578] liquibase: migrations.xml: migrations.xml::1::codahale: ChangeSet migrations.xml::1::codahale ran successfully in 2ms
+INFO  [2017-08-05 21:43:14,584] liquibase: Successfully released change log lock
+DEBUG [2017-08-05 21:43:15,058] org.hibernate.SQL: /* insert com.example.helloworld.core.Person */ insert into people (id, fullName, jobTitle) values (null, ?, ?)
+INFO  [2017-08-05 21:43:15,089] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    68494 nanoseconds spent acquiring 2 JDBC connections;
+    55207 nanoseconds spent releasing 2 JDBC connections;
+    163059 nanoseconds spent preparing 1 JDBC statements;
+    1145945 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    2744375 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+127.0.0.1 - - [05/Aug/2017:21:43:15 +0000] "POST /people HTTP/1.1" 200 67 "-" "Jersey/2.25.1 (HttpUrlConnection 1.8.0_121)" 307
+127.0.0.1 - - [05/Aug/2017:21:43:15 +0000] "GET /hello-world?name=Dr.+IntegrationTest HTTP/1.1" 200 48 "-" "Jersey/2.25.1 (HttpUrlConnection 1.8.0_121)" 11
+INFO  [2017-08-05 21:43:15,118] org.eclipse.jetty.server.AbstractConnector: Stopped application@7a8e412a{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+INFO  [2017-08-05 21:43:15,118] org.eclipse.jetty.server.AbstractConnector: Stopped application@4c4e69e7{SSL,[ssl, http/1.1]}{0.0.0.0:8443}
+INFO  [2017-08-05 21:43:15,119] org.eclipse.jetty.server.AbstractConnector: Stopped admin@71a7e897{HTTP/1.1,[http/1.1]}{0.0.0.0:8081}
+INFO  [2017-08-05 21:43:15,119] org.eclipse.jetty.server.AbstractConnector: Stopped admin@1a167d07{SSL,[ssl, http/1.1]}{0.0.0.0:8444}
+INFO  [2017-08-05 21:43:15,120] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@152e7b72{/,null,UNAVAILABLE}
+INFO  [2017-08-05 21:43:15,123] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@4c68a757{/,null,UNAVAILABLE}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
