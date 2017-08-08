@@ -42,14 +42,17 @@ dependencies {
             'io.dropwizard:dropwizard-metrics-graphite:' + dropwizardVersion,
             'io.dropwizard:dropwizard-migrations:' + dropwizardVersion,
             'io.dropwizard:dropwizard-views-freemarker:' + dropwizardVersion,
-            'io.dropwizard:dropwizard-views-mustache:' + dropwizardVersion
+            'io.dropwizard:dropwizard-views-mustache:' + dropwizardVersion,
+            'javax.transaction:jta:1.1'
 
+	runtime 'javax.xml.bind:jaxb-api:2.2.12'
 
     testCompile 'io.dropwizard:dropwizard-testing:' + dropwizardVersion,
                 'org.glassfish.hk2:hk2-api:2.1.58',
                 'org.mockito:mockito-core:2.8.47',
-                'junit:junit:4.12'
-
+                'junit:junit:4.12',
+                'net.bytebuddy:byte-buddy:1.7.2'
+                
     testCompile ('org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:' + testDependencyVersion) {
       exclude group: 'javax.servlet', module: 'javax-servlet-api'
       exclude group: 'junit', module: 'junit'

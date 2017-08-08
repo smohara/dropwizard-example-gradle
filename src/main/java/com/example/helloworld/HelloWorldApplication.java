@@ -34,6 +34,15 @@ import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 import java.util.Map;
 
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
+	
+	{
+		String java9VersionStringHackForJadiraUsertypeSPI = System.getProperty("java.version");
+		if (java9VersionStringHackForJadiraUsertypeSPI.split("[.]").length==1) {
+			System.setProperty("java.version",java9VersionStringHackForJadiraUsertypeSPI + ".0");
+		}
+	}
+	
+	
     public static void main(String[] args) throws Exception {
         new HelloWorldApplication().run(args);
     }
